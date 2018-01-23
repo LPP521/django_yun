@@ -16,8 +16,12 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from my_pan.views import *
+from mpan.views import *
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', index),
+    path('file_list/', file_list),
+    path('github/', github),
+    path('about/', about)
 ]
