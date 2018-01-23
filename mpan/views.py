@@ -11,3 +11,7 @@ def github(request):
 
 def about(request):
     return render(request, "about.html")
+
+
+def lixian(request):
+    return render(request, "lixian.html")

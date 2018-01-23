@@ -23,5 +23,6 @@ urlpatterns = [
     path('', index),
     path('file_list/', file_list),
     path('github/', github),
-    path('about/', about)
+    path('about/', about),
+    path('lixian/', lixian)
 ]
