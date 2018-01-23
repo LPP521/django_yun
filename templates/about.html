@@ -6,6 +6,24 @@
 
 {% block body %}
     <h1>关于本网盘</h1>
+<div id="ruleList"></div>
+    <script>
+$.ajax({
+           type: "GET",
+           url: "/api/lixian/",
+           dataType: "json",
+           data:  "",
+           success: function (jsonStr) {
+               var ruleListTemp = "<table width=\"100%\"  border=\"0\" cellspacing=\"0\" cellpadding=\"0\">";
+                $.each(jsonStr, function (n, value) {
+                   ruleListTemp += ("<tr><td>" + n);
+                   ruleListTemp += ("</td></tr>");
+               });
+                ruleListTemp += ("</table>");
+               $("#ruleList").html(ruleListTemp);
+           }
+    });
+</script>
 {% endblock %}
 
 {% block where3 %}
