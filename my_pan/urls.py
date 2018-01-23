@@ -15,6 +15,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from django.urls import include
 from my_pan.views import *
 from mpan.views import *
 
@@ -24,5 +25,6 @@ urlpatterns = [
     path('file_list/', file_list),
     path('github/', github),
     path('about/', about),
-    path('lixian/', lixian)
+    path('lixian/', lixian),
+    path('api/', include('api.urls'))
 ]
